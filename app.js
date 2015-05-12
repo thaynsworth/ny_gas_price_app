@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('ds031952.mongolab.com:31952/gas_price_db');
+var db = monk('mongodb://thaynsworth:Champlain8@ds031952.mongolab.com:31952/gas_price_db');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
