@@ -6,16 +6,14 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Gas Price App' });
-  var db = req.db;
-  var collection = db.get('mynewcollection');
-  collection.find({},{},function(e,docs){
-    res.render('foo', {
-      "foo" : docs
-    });
-  });
+/* GET Hello World page */
+router.get('/helloworld', function(req, res) {
+  res.render('helloworld', { title: 'Hello, World!'})
+});
+
+/* GET Gas page */
+router.get('/gas', function(req, res) {
+  res.render('gas', { title: 'Gas Price Page!'})
 });
 
 module.exports = router;
