@@ -13,7 +13,18 @@ router.get('/helloworld', function(req, res) {
 
 /* GET Gas page */
 router.get('/gas', function(req, res) {
-  res.render('gas', { title: 'Gas Price Page!'})
+  var db = req.db;
+  var collection = db.get('gas_prices');
+  //var allProductsArray = collection.find().toArray();
+  //console.log(allProductsArray);
+  //alert(allProductsArray);
+  //res.render('gas', { gas: allProductsArray });
+  collection.find({},{},function(err,docs){
+    console.log(docs);
+    res.render('gas', {
+      "gas": docs
+    });
+  });
 });
 
 module.exports = router;

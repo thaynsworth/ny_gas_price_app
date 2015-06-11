@@ -1,3 +1,22 @@
 <h1>Gas paggeee</h1>
 
-<h2>{{title}}</h2>
+<ul>
+    {{#each gas}}
+        {{#each this.data.[0]}}
+
+            <li>{{this}}</li>
+
+
+        {{/each}}
+    {{/each}}
+</ul>
+
+<h1>Name</h1>
+
+<h1>{{gas.meta.view.name}}</h1>
+
+<h1>ID</h1>
+<h1>{{gas._id}}</h1>
+
+
+
