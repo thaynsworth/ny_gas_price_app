@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var d3 = require("d3");
 var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('mongodb://thaynsworth:password@ds031952.mongolab.com:31952/gas_price_db');
